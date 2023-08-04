@@ -1,0 +1,9 @@
+{
+  "name": "detect-crawling-react",
+  "version": "0.0.2",
+  "description": "",
+  "main": "DetectCrawlingReact.js",
+  "scripts": {},
+  "author": "leemhoon00",
+  "license": "MIT"
+}
