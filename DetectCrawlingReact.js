@@ -18,6 +18,12 @@ function MyComponent({backURL}) {
           countRef.current += 1;
           if(countRef.current >= 3){
             console.log('crawling detected 3 times');
+            fetch(backURL, {
+              method: 'GET',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+            })
           }
         }
         else{
@@ -27,7 +33,6 @@ function MyComponent({backURL}) {
 
       urlRef.current = { url: window.location.href };
       mousePositionPer2SecondRef.current = mousePositionRef.current;
-      console.log(countRef.current);
     };
 
     const intervalId = setInterval(detect, 2000);
@@ -39,7 +44,6 @@ function MyComponent({backURL}) {
       window.removeEventListener('mousemove', updateInformation);
     };
   }, []);
-
 
   return;
 }
