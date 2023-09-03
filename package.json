@@ -1,7 +1,7 @@
 {
   "name": "detect-crawling-react",
-  "version": "0.0.4",
-  "description": "",
+  "version": "1.0.0",
+  "description": "This is the React Component for Detect Crawling",
   "main": "DetectCrawlingReact.js",
   "scripts": {},
   "author": "leemhoon00",
