@@ -1,7 +1,17 @@
 {
   "name": "detect-crawling-react",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "This is the React Component for Detect Crawling",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leemhoon00/detect-crawling-react.git"
+  },
+  "keywords": [
+    "detect",
+    "crawling",
+    "react",
+    "component"
+  ],
   "main": "DetectCrawlingReact.js",
   "scripts": {},
   "author": "leemhoon00",
