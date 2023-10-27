@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-function MyComponent({ backURL }) {
+function MyComponent({ callback }) {
   const mousePositionRef = useRef({ x: 0, y: 0 });
   const urlRef = useRef({ url: window.location.href });
   const mousePositionPer2SecondRef = useRef({ x: 0, y: 0 });
@@ -19,12 +19,7 @@ function MyComponent({ backURL }) {
         ) {
           countRef.current += 1;
           if (countRef.current >= 3) {
-            fetch(backURL, {
-              method: "GET",
-              headers: {
-                "Content-Type": "application/json",
-              },
-            });
+            callback();
           }
         } else {
           countRef.current = 0;
