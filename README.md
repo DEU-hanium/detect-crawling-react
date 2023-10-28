@@ -1,6 +1,6 @@
 # Description
 
-This is the React Component for Detect Crawling
+A React Component for Crawling Detection based on URL and Mouse Position Information
 
 ## Installation
 
@@ -13,21 +13,19 @@ npm install detect-crawling-react
 ```javascript
 import DetectCrawlingReact from "detect-crawling-react";
 function App() {
+  // Define a function to execute when crawling is detected
+  const callback = async () => {
+    const response = await fetch("https://my-server");
+    if (response.status === 200) {
+      alert("crawling detected");
+      window.location.href = "https://example.com";
+    }
+  };
   return (
     <div className="App">
-      <DetectCrawlingReact backURL={"https://example.com/crawling"} />
+      <DetectCrawlingReact callback={callback} />
       // Your Component
     </div>
   );
 }
 ```
-
-## Props
-
-| Name    | Type   | Description                                                                |
-| ------- | ------ | -------------------------------------------------------------------------- |
-| backURL | string | When crawling is detected, your webSite will Request Get Method to backURL |
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
